@@ -131,7 +131,7 @@ function transform(oldPointStructure) {
        newStructure[oldPointStructure[keyValue][i].toLowerCase()] = Number(keyValue);
     }
 }
-  newStructure[' '] = 0; 
+  // newStructure[' '] = 0; 
   return newStructure;
 
 };
