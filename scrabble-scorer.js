@@ -15,7 +15,7 @@ const oldPointStructure = {
 
 
 function oldScrabbleScorer(word) {
-	word = word.toLowerCase();
+	word = word.toUpperCase();
 	let letterPoints = "";
  
 	for (let i = 0; i < word.length; i++) {
@@ -80,7 +80,7 @@ function vowelBonusScore(word) {
 }
 
 function scrabbleScore(word) {
-	word = word.toUpperCase();
+	word = word.toLowerCase();
 	let letterPoints = 0;
   
 	for (let i = 0; i < word.length; i++) {
@@ -137,7 +137,7 @@ function transform(oldPointStructure) {
 };
 
 let newPointStructure = transform(oldPointStructure);
-
+console.log(newPointStructure);
 
 function runProgram() {
    initialPrompt();
