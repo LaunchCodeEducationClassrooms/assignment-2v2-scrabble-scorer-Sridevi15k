@@ -93,17 +93,17 @@ function scrabbleScore(word) {
 let objectSimpleScore = {
   name: 'Simple Score',
   description: "Each letter is worth 1 point.",
-  scorerFunction: simpleScore
+  scoringFunction: simpleScore
 };
 let objectVowelBonusScore = {
   name: 'Bonus Vowel',
   description: "Vowels are 3 pts, consonants are 1 pt.",
-  scorerFunction: vowelBonusScore
+  scoringFunction: vowelBonusScore
 };
 let objectScrabbleScore = {
   name: 'Scrabble',
   description: "The traditional scoring algorithm.",
-  scorerFunction: scrabbleScore
+  scoringFunction: scrabbleScore
 };
 const scoringAlgorithms = [objectSimpleScore, objectVowelBonusScore, objectScrabbleScore];
 
@@ -119,7 +119,7 @@ function scorerPrompt(word) {
       methodNumber = input.question('Please enter a valid number: ');
      } 
 
-     console.log(`Score for ${word}: ${scoringAlgorithms[Number(methodNumber)].scorerFunction(word)}`);
+     console.log(`Score for ${word}: ${scoringAlgorithms[Number(methodNumber)].scoringFunction(word)}`);
 
 }
 
